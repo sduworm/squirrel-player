@@ -12,6 +12,7 @@ class Player extends Component {
     render() {
         const {
             updateState,
+            savePlayingProgress,
             playTime,
             soundTime,
             playTimeProcess,
@@ -20,7 +21,7 @@ class Player extends Component {
             currentSoundIndex,
         } = this.props;
 
-        const playbarProps = {
+        const playBarProps = {
             playTime,
             soundTime,
             playTimeProcess,
@@ -56,11 +57,11 @@ class Player extends Component {
                 updateState({currentSoundIndex: index})
             },
             updatePlayTime(playTimeObj) {
-                updateState(playTimeObj)
+                savePlayingProgress(playTimeObj)
             },
         };
 
-        return <Card><List bordered header={<PlayBar {...playbarProps}/>}
+        return <Card><List bordered header={<PlayBar {...playBarProps}/>}
                            footer={<div>{`共${soundList.length}条`}</div>}
                            dataSource={soundList.map(list => list.name)}
                            renderItem={(item, index) => <List.Item>

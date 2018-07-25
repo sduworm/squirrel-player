@@ -11,7 +11,13 @@ const PlayerContainer = ({dispatch, ...props}) => {
                 type: 'updateState',
                 payload: obj,
             });
-        }
+        },
+        savePlayingProgress(obj) {
+            dispatch({
+                type: 'savePlayingProgressStatusAndUpdateState',
+                payload: obj,
+            });
+        },
     };
     return <Player {...playerProps} />
 };

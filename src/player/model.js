@@ -10,13 +10,12 @@ const model = {
 
     },
     reducers: {
-        addStepCount(state, action) {
-            const { count } = state;
-            const { step } = action.payload;
-            // count += 10;
+        savePlayingProgressStatusAndUpdateState(state, action){
+            const playingProgressStatus = action.payload;
+            localStorage.setItem('playingProgressStatus',JSON.stringify(playingProgressStatus));
             return {
                 ...state,
-                count: count + step
+                ...playingProgressStatus,
             }
         },
         updateState(state, action){
@@ -28,11 +27,9 @@ const model = {
     },
     async setup(dispatch, getState, action) {
         dispatch({
-            type: 'setState',
-            payload: {
-                count: 10
-            }
-        });
+            type:'updateState',
+            payload:JSON.parse(localStorage.getItem('playingProgressStatus')),
+        })
     }
 };
 

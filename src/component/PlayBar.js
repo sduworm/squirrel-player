@@ -39,11 +39,13 @@ class PlayBar extends Component {
     }
     componentDidMount() {
         this.player.ontimeupdate = (e) => {
-            this.props.updatePlayTime({
-                playTime: e.target.currentTime,
-                playTimeProcess: (e.target.currentTime * 100) / e.target.duration,
-                soundTime: e.target.duration,
-            });
+            if (e.target.duration && isRealNum(e.target.duration)){
+                this.props.updatePlayTime({
+                    playTime: e.target.currentTime,
+                    playTimeProcess: (e.target.currentTime * 100) / e.target.duration,
+                    soundTime: e.target.duration,
+                });
+            }
         };
         this.player.onended = () => {
             switch (this.props.circulationMode) {

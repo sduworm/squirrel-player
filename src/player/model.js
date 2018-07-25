@@ -1,34 +1,34 @@
 const model = {
-    namespace:'player',
+    namespace: 'player',
     initial: {
         currentSoundIndex: 0,
-        playTime:0,
+        playTime: 0,
         soundTime: 0,
-        playTimeProcess:0,
+        playTimeProcess: 0,
         isPlaying: false,
-        circulationMode:'list',
-
+        circulationMode: 'list',
+        currentAlbumIndex: 0,
     },
     reducers: {
-        savePlayingProgressStatusAndUpdateState(state, action){
+        savePlayingProgressStatusAndUpdateState(state, action) {
             const playingProgressStatus = action.payload;
-            localStorage.setItem('playingProgressStatus',JSON.stringify(playingProgressStatus));
+            localStorage.setItem('playingProgressStatus', JSON.stringify(playingProgressStatus));
             return {
                 ...state,
                 ...playingProgressStatus,
             }
         },
-        updateState(state, action){
+        updateState(state, action) {
             return {
                 ...state,
                 ...action.payload,
             }
         }
     },
-    async setup(dispatch, getState, action) {
+    async setup(dispatch) {
         dispatch({
-            type:'updateState',
-            payload:JSON.parse(localStorage.getItem('playingProgressStatus')),
+            type: 'updateState',
+            payload: JSON.parse(localStorage.getItem('playingProgressStatus')),
         })
     }
 };

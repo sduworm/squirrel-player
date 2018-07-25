@@ -2,10 +2,12 @@ import React from 'react';
 import kos from 'kos-core';
 import model from './model';
 import Player from '../component/Player'
+import albumList from '../albumList'
 
 const PlayerContainer = ({dispatch, ...props}) => {
     const playerProps = {
         ...props,
+        albumList,
         updateState(obj) {
             dispatch({
                 type: 'updateState',

@@ -33,10 +33,8 @@ const formatSongTime = (time) => {
 
 class PlayBar extends Component {
     componentDidUpdate() {
-        if (this.props.isPlaying) {
+        if (this.player.paused && this.props.isPlaying) {
             this.play()
-        } else {
-            this.pause()
         }
     }
 

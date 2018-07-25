@@ -126,6 +126,7 @@ class PlayBar extends Component {
                         value={playTimeProcess ? Number(playTimeProcess) : 0}
                         defaultValue={0} onChange={this.handleSliderChange}/>
                 <div><em>{formatSongTime(playTime)}</em> / {formatSongTime(soundTime)}</div>
+                <br/>
             </div>
             <div style={{textAlign: "center"}}>
                 <Button icon="step-backward" type="primary" shape="circle" size="large"
@@ -135,7 +136,7 @@ class PlayBar extends Component {
                         style={{marginLeft: 20, marginRight: 20}} onClick={this.handlePlayPauseClick}/>
                 <Button icon="step-forward" type="primary" shape="circle" size="large" style={{marginRight: 20}}
                         onClick={this.changeSoundNext}/>
-                <Button icon={circulationIcon} type="primary" shape="circle" size="large" style={{marginRight: 20}}
+                <Button icon={circulationIcon} type="primary" shape="circle" size="large"
                         onClick={updateCirculationMode}/>
             </div>
             <audio ref={(audio) => {

@@ -69,6 +69,7 @@ class PlayBar extends Component {
     // 播放
     play = () => {
         if (this.player) {
+            this.player.currentTime = this.props.playTime;
             this.player.play();
             return true
         }
@@ -139,7 +140,6 @@ class PlayBar extends Component {
                 <Button icon={circulationIcon} type="primary" shape="circle" size="large" style={{marginRight: 20}}
                         onClick={updateCirculationMode}/>
             </div>
-
             <audio ref={(audio) => {
                 this.player = audio;
             }} src={soundURL}>浏览器不支持

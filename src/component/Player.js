@@ -6,7 +6,7 @@ import PlayBar from "./PlayBar";
 
 class Player extends Component {
     chooseSound(index) {
-        return () => this.props.updateState({currentSoundIndex: index, isPlaying: true});
+        return () => this.props.updateState({currentSoundIndex: index, isPlaying: true, playTime: 0});
     }
 
     render() {
@@ -58,7 +58,7 @@ class Player extends Component {
                         break;
                 }
                 index = circulationMode === 'random' ? randomIndex : index;
-                updateState({currentSoundIndex: index})
+                updateState({currentSoundIndex: index, playTime: 0})
             },
             updatePlayTime(playTimeObj) {
                 savePlayingProgress({currentAlbumIndex, currentSoundIndex, ...playTimeObj})
@@ -69,7 +69,12 @@ class Player extends Component {
             currentAlbumIndex,
             albumList,
             changeAlbum(albumIndex) {
-                savePlayingProgress({currentSoundIndex:0, currentAlbumIndex: albumIndex, playTime:0,playTimeProcess:0})
+                savePlayingProgress({
+                    currentSoundIndex: 0,
+                    currentAlbumIndex: albumIndex,
+                    playTime: 0,
+                    playTimeProcess: 0
+                })
             }
         };
 

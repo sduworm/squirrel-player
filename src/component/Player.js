@@ -67,8 +67,8 @@ class Player extends Component {
                                <List.Item.Meta
                                    avatar={<a onClick={this.chooseSound(index)}><Avatar
                                        src={index === currentSoundIndex && isPlaying ? config.CURRENT_PLAYING_SOUND_ICON : config.SOUND_ICON}/></a>}
-                                   description={index === currentSoundIndex ?
-                                       <strong><Icon type="play-circle"/> {item}</strong> : item}
+                                   description={<span onClick={this.chooseSound(index)}>{index === currentSoundIndex ?
+                                       <strong><Icon type="play-circle"/> {item}</strong> : item}</span>}
                                />
                            </List.Item>}
         /></Card>

@@ -6,11 +6,7 @@ function isRealNum(val){
     if(val === "" || val ==null){
         return false;
     }
-    if(!isNaN(val)){
-        return true;
-    }else{
-        return false;
-    }
+    return !isNaN(val);
 }
 
 /**
@@ -38,7 +34,7 @@ const formatSongTime = (time) => {
 class PlayBar extends Component {
     componentDidUpdate (){
         if (this.props.isPlaying){
-            this.play();
+            setTimeout(()=>this.play(),500);
         }
     }
     componentDidMount() {
@@ -55,7 +51,7 @@ class PlayBar extends Component {
                     this.player.load();
                     break;
                 default:
-                    this.props.changeSound('forward');
+                    this.props.changeSound('next');
                     break;
             }
         };

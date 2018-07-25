@@ -1,9 +1,9 @@
 import React, {Component, Fragment} from 'react';
 import {Button, Slider} from 'antd';
 
-function isRealNum(val){
+function isRealNum(val) {
     // isNaN()函数 把空串 空格 以及NUll 按照0来处理 所以先去除
-    if(val === "" || val ==null){
+    if (val === "" || val == null) {
         return false;
     }
     return !isNaN(val);
@@ -16,7 +16,7 @@ function isRealNum(val){
  * @returns {String} 返回格式化之后的时间字符串.
  */
 const formatSongTime = (time) => {
-    if (!isRealNum(time)){
+    if (!isRealNum(time)) {
         return '00:00';
     }
     let minute = Math.floor(time / 60);
@@ -32,14 +32,17 @@ const formatSongTime = (time) => {
 };
 
 class PlayBar extends Component {
-    componentDidUpdate (){
-        if (this.props.isPlaying){
-            setTimeout(()=>this.play(),500);
+    componentDidUpdate() {
+        if (this.props.isPlaying) {
+            this.play()
+        } else {
+            this.pause()
         }
     }
+
     componentDidMount() {
         this.player.ontimeupdate = (e) => {
-            if (e.target.duration && isRealNum(e.target.duration)){
+            if (e.target.duration && isRealNum(e.target.duration)) {
                 this.props.updatePlayTime({
                     playTime: e.target.currentTime,
                     playTimeProcess: (e.target.currentTime * 100) / e.target.duration,

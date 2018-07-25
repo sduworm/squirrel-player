@@ -58,6 +58,9 @@ class PlayBar extends Component {
                     break;
             }
         };
+        this.player.onloadeddata = () => {
+            this.player.currentTime = this.props.playTime;
+        };
     }
 
     handleSliderChange = (percentValue) => {
@@ -67,7 +70,6 @@ class PlayBar extends Component {
     // 播放
     play = () => {
         if (this.player) {
-            this.player.currentTime = this.props.playTime;
             this.player.play();
             return true
         }
@@ -124,7 +126,7 @@ class PlayBar extends Component {
             <div>
                 <Slider tipFormatter={null}
                         value={playTimeProcess ? Number(playTimeProcess) : 0}
-                        defaultValue={0} onChange={this.handleSliderChange}/>
+                        onChange={this.handleSliderChange}/>
                 <div><em>{formatSongTime(playTime)}</em> / {formatSongTime(soundTime)}</div>
                 <br/>
             </div>

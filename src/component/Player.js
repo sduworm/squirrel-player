@@ -73,7 +73,8 @@ class Player extends Component {
                     currentSoundIndex: 0,
                     currentAlbumIndex: albumIndex,
                     playTime: 0,
-                    playTimeProcess: 0
+                    playTimeProcess: 0,
+                    isPlaying: false,
                 })
             }
         };

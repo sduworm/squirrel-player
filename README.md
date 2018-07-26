@@ -2,11 +2,11 @@
 松鼠播放器
 
 #### 资源
-[静态资源发布项目](https://github.com/sduworm/squirrel-player-static)
+[静态资源发布gh-pages分支](https://github.com/sduworm/squirrel-player/tree/gh-pages)
 
-[静态功能访问](https://sduworm.github.io/squirrel-player-static/)
+[静态功能访问](https://sduworm.github.io/squirrel-player/)
 
-![image](https://sduworm.github.io/squirrel-player-static/apk/download-url-to-index-html.png)
+![image](https://sduworm.github.io/squirrel-player/apk/download-url-to-index-html.png)
 
 扫码下载安卓APP
 

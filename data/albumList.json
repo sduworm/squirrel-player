@@ -23,6 +23,9 @@
       {
         "name": "浪人琵琶",
         "url": "http://mediacdn.mengliaoba.cn/fanchang/2018/7-7/92/9390992-80922403-1428201143.mp4?KEY1=58fc03ed084a3502be3034d587d49455&KEY2=5B5961E4"
+      },      {
+        "name": "两小无猜",
+        "url": "http://mediacdn.mengliaoba.cn/fanchang/2018/7-30/92/9390992-50806530-2144397918.mp4?KEY1=fbd024c841b401af18e67316c82d1327&KEY2=5B664836"
       },
       {
         "name": "没时间",
@@ -67,7 +70,24 @@
         "name": "硅谷钢铁侠8：下一个计划！让超级高铁干掉飞机",
         "url": "https://res.wx.qq.com/voice/getvoice?mediaid=MzA5NTA2NTU4M18yMjQ3NDg3OTkz"
       }
-    ]
+    ],
+    {
+      "album": "hafocaishangke",
+      "name": "哈佛财商课",
+      "desc": "齐俊杰读书圈摘录",
+      "list": [
+        {
+          "name": "哈佛财商课1：富人攒资产 而穷人则在收集负债",
+          "url": "https://res.wx.qq.com/voice/getvoice?mediaid=MzA5NTA2NTU4M18yMjQ3NDg4MjUy"
+        },
+        {
+          "name": "哈佛财商课2：耻于谈钱！缺少野心！是穷的主要原因",
+          "url": "https://res.wx.qq.com/voice/getvoice?mediaid=MzA5NTA2NTU4M18yMjQ3NDg4MjY4"
+        },
+        {
+          "name": "哈佛财商课3：赚钱的基础条件你具备吗？",
+          "url": "https://res.wx.qq.com/voice/getvoice?mediaid=MzA5NTA2NTU4M18yMjQ3NDg4Mjc5"
+        },
+      ]
   }
 ]
-

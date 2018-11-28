@@ -2,7 +2,7 @@
   "name": "squirrel-player",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sduworm.github.io/squirrel-player",
+  "homepage": "https://sounds.songshuyang.top/",
   "dependencies": {
     "antd": "^3.7.1",
     "isomorphic-fetch": "^2.2.1",

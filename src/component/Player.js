@@ -23,7 +23,7 @@ class Player extends Component {
             albumList,
         } = this.props;
 
-        const soundList = albumList[currentAlbumIndex].list;
+        const soundList = albumList[currentAlbumIndex].list || [{}];
 
         const playBarProps = {
             playTime,

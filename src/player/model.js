@@ -1,4 +1,6 @@
-const model = {
+import {queryAlbumList} from "./service";
+
+export default {
     namespace: 'player',
     initial: {
         currentSoundIndex: 0,
@@ -8,6 +10,7 @@ const model = {
         isPlaying: false,
         circulationMode: 'list',
         currentAlbumIndex: 0,
+        albumList: [{}],
     },
     reducers: {
         savePlayingProgressStatusAndUpdateState(state, action) {
@@ -26,11 +29,15 @@ const model = {
         }
     },
     async setup(dispatch) {
-        dispatch({
-            type: 'updateState',
-            payload: JSON.parse(localStorage.getItem('playingProgressStatus')),
+        // dispatch({
+        //     type: 'updateState',
+        //     payload: JSON.parse(localStorage.getItem('playingProgressStatus')),
+        // });
+        queryAlbumList().then(albumList => {
+            dispatch({
+                type: 'updateState',
+                payload: {albumList, ...JSON.parse(localStorage.getItem('playingProgressStatus'))},
+            });
         })
     }
 };
-
-export default model;

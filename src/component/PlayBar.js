@@ -133,7 +133,7 @@ class PlayBar extends Component {
             <div style={{textAlign: "center"}}>
                 <Button icon="step-backward" type="primary" shape="circle" size="large"
                         onClick={this.changeSoundPrevious}/>
-                <Button icon={isPlaying ? 'pause-circle' : 'caret-right'} type="primary" shape="circle"
+                <Button icon={isPlaying ? 'pause' : 'caret-right'} type="primary" shape="circle"
                         size="large"
                         style={{marginLeft: 20, marginRight: 20}} onClick={this.handlePlayPauseClick}/>
                 <Button icon="step-forward" type="primary" shape="circle" size="large" style={{marginRight: 20}}

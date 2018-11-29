@@ -1,6 +1,9 @@
 [
   {
     "album": "erjingyu",
+    "author": "晓",
+    "diaryTitle": "轻言 细唱 浅叹 短吟",
+    "diarySummary": "不明所以的就这样开始了",
     "name": "薛晓同名专辑",
     "desc": "个人首张发烧大碟，主打歌《XX》问鼎济南金曲榜第190名",
     "list": [
@@ -66,6 +69,9 @@
     "album": "guigugangtiexia",
     "name": "硅谷钢铁侠",
     "desc": "齐俊杰读书圈摘录",
+    "author": "老齐",
+    "diaryTitle": "钢铁侠日记",
+    "diarySummary": "活到老走万里路，学到老读万卷书",
     "list": [
       {
         "name": "硅谷钢铁侠1：我们的企业家还在买地盖房 人家的企业家已经玩火箭了",
@@ -105,6 +111,9 @@
     "album": "hafocaishangke",
     "name": "哈佛财商课",
     "desc": "齐俊杰读书圈摘录",
+    "author": "老齐",
+    "diaryTitle": "谁的哈佛梦",
+    "diarySummary": "书山路 and 学海涯",
     "list": [
       {
         "name": "哈佛财商课1：富人攒资产 而穷人则在收集负债",

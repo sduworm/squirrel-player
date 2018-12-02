@@ -112,7 +112,7 @@
     "name": "哈佛财商课",
     "desc": "齐俊杰读书圈摘录",
     "author": "老齐",
-    "diaryTitle": "谁的哈佛梦",
+    "diaryTitle": "你的哈佛",
     "diarySummary": "书山路 and 学海涯",
     "list": [
       {
@@ -166,6 +166,24 @@
       {
         "name": "哈佛财商课13：大学生不如农民工！知识改变命运这话错了吗？",
         "url": "https://res.wx.qq.com/voice/getvoice?mediaid=MzA5NTA2NTU4M18yMjQ3NDg4NDAx"
+      }
+    ]
+  },
+  {
+    "album": "erjinyu",
+    "name": "二斤鱼",
+    "desc": "二斤金鱼八斤鲅鱼六十二斤六眼飞鱼",
+    "author": "晓",
+    "diaryTitle": "浮生未歇",
+    "diarySummary": "我说我当不了县长你非要花钱给我买个官",
+    "list": [
+      {
+        "name": "故梦",
+        "url": "http://mediacdn.mengliaoba.cn/fanchang/2018/11-12/92/9390992-25054392-1542003786.mp4?KEY1=fbbf327d2cf2b92e0e6bb21c6199416e&KEY2=5C0492A0"
+      },
+      {
+        "name": "浮生",
+        "url": "http://mediacdn.mengliaoba.cn/fanchang/2018/11-19/92/9390992-76258629-1542590560.mp4?KEY1=c2066e5d3fc7e1b2e0efa4ebf165d0e4&KEY2=5C049323"
       }
     ]
   }
